@@ -6,16 +6,16 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
+  <ion-card color="primary">
     <div class="titulos">
       <h3>Recuperar contraseña</h3>
       <p>Paso 1: Ingresa tu correo</p>
     </div>
   
     <div id="container">
-      <form>
+      <form (submit)="onSubmit()">
         <div class="form-group">
-          <center><input class="form-control" type="text" placeholder="Ingresa tu Correo" ></center>
+          <ion-input type="text" [(ngModel)]="usuario.nombreUsuario" name="nombreUsuario"></ion-input>
         </div>
         
         <div>
@@ -25,5 +25,5 @@
     <br>
     </div>
   </ion-card>
-  <center><a [routerLink]="'/pregunta'">Iniciar Sesi&oacute;n</a></center>
+  <center><a [routerLink]="'/login'">Iniciar Sesi&oacute;n</a></center>
 </ion-content>

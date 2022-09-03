@@ -35,9 +35,9 @@ export class Usuario {
   }
   public getUsuarios(): Usuario[] {
     const usuarios = [];
-    usuarios.push({ nombreUsuario: 'atorres@duocuc.cl', password: '1234', nombrePersona: 'Ana Torres Leiva' });
-    usuarios.push({ nombreUsuario: 'avalenzuela@duocuc.cl', password: 'qwer', nombrePersona: 'Alberto Valenzuela Nuñez' });
-    usuarios.push({ nombreUsuario: 'cfuentes@duocuc.cl', password: 'asdf', nombrePersona: 'Carla Fuentes Gonzáles' });
+    usuarios.push({ nombreUsuario: 'atorres@duocuc.cl', password: '1234', nombrePersona: 'Ana Torres Leiva', pregunta: 'Nombre de tu mascota', respuesta: 'gato'});
+    usuarios.push({ nombreUsuario: 'avalenzuela@duocuc.cl', password: 'qwer', nombrePersona: 'Alberto Valenzuela Nuñez', pregunta: 'Nombre de tu mejor amigo', respuesta: 'juanito'});
+    usuarios.push({ nombreUsuario: 'cfuentes@duocuc.cl', password: 'asdf', nombrePersona: 'Carla Fuentes Gonzáles', pregunta: 'Lugar de nacimiento de tu madre', respuesta: 'Valparaíso'});
     return usuarios;  
   }
 

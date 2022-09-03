@@ -10,14 +10,14 @@
     <div class="titulos">
       <h3>Recuperar contraseña</h3>
       <p>Paso 2: Responde la pregunta secreta</p>
-      <h1>Nombre del usuario</h1>
-      <h3>¿Nombre de tu mascota?</h3>
+      <h1>{{ nombre }}</h1>
+      <h3>{{ pregunta }}</h3>
     </div>
   
     <div id="container">
-      <form>
+      <form (submit)="onSubmit()">
         <div class="form-group">
-          <center><input class="form-control" type="text" placeholder="Ingresa tu Correo" ></center>
+          <center><input class="form-control" type="text" placeholder="Ingresa tu respuesta" [(ngModel)]="usuario.nombreUsuario" name="answer" ></center>
         </div>
         
         <div>

@@ -37,7 +37,7 @@ export class HomePage implements OnInit, AfterViewInit {
     para que los parámetros pasen a considerarse automáticamente como propiedades
     de la clase "HomePage" y de este modo puedan usarse dentro de los otros métodos.
    */
-   constructor(
+constructor(
         private activeroute: ActivatedRoute
       , private router: Router
       , private alertController: AlertController
@@ -67,7 +67,7 @@ public qrbtn(){
 }
 
 public profiletab(){
-  this.router.navigate(['/home'])
+  this.router.navigate(['tab/home'])
 }
 
 public ngOnInit(): void {

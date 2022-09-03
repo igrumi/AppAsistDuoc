@@ -3,7 +3,7 @@ ion-toolbar{
 }
 
 .btn{
-    background-color: var(--ion-color-secondaryduoc-shade);
+    background-color: rgb(249, 204, 0);
     color: white;
     padding: 1em 1.2em;
     border-radius: 10px;
@@ -13,6 +13,7 @@ ion-toolbar{
 
 #container{
     text-align: center;
+    background-color: rgb(17, 16, 16);
 }
 
 .titulos{
@@ -22,7 +23,7 @@ ion-toolbar{
 }
 
 ion-card{
-    background-color: rgb(249, 204, 0);
+    background-color: rgb(17, 16, 16);
     padding: 1em 0;
 
 }

@@ -1,6 +1,10 @@
 <ion-header>
-  <ion-toolbar color="secondary-duoc">
-    <ion-title>Lectura de Código QR</ion-title>
+  <ion-toolbar color="warning">
+    <ion-title #titulo class="ion-text-left ion-text">
+      <div color="secondary-duoc">
+        SISTEMA DE ASISTENCIA DUOCUC
+      </div>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 <br>
@@ -49,11 +53,11 @@
 </ion-content>
 <ion-tab-bar slot="bottom">
   <ion-tab-button (click)="profiletab()">
-    <ion-icon name="person"></ion-icon>
-    <ion-label>Perfil</ion-label> 
+    <ion-icon name="qr-code"></ion-icon>
+    <ion-label>Inicio</ion-label> 
   </ion-tab-button>
   <ion-tab-button (click)="qrbtn()">
-    <ion-icon name="qr-code"></ion-icon>
-    <ion-label>QR</ion-label> 
+    <ion-icon name="person"></ion-icon>
+    <ion-label>Mi clase</ion-label> 
   </ion-tab-button>
 </ion-tab-bar>

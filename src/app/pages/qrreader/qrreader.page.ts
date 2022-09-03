@@ -25,8 +25,16 @@ export class QrreaderPage implements AfterViewInit {
   public datosQR = '';
   public loading: HTMLIonLoadingElement = null;
 
-  public constructor(private loadingController: LoadingController) {
+  public constructor(private loadingController: LoadingController, private router: Router) {
 
+  }
+  
+  public qrbtn(){
+    this.router.navigate(['/tab/home'])
+  }
+  
+  public profiletab(){
+    this.router.navigate(['/qrreader'])
   }
 
   ngAfterViewInit() {
@@ -41,7 +49,7 @@ export class QrreaderPage implements AfterViewInit {
     this.loading = null;
     (document.getElementById('input-file') as HTMLInputElement).value = '';
   }
-
+  
   public async comenzarEscaneoQR() {
     this.limpiarDatos();
     const mediaProvider: MediaProvider = await navigator.mediaDevices.getUserMedia({
