@@ -1,0 +1,33 @@
+ion-header {
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+}
+
+ion-title {
+  font-size: 0.8em;
+}
+
+ion-header {
+  background-color: primary;
+}
+
+ion-label {
+  width: 130px;
+}
+
+ion-input, ion-select {
+  color: gray;
+  text-align: right;
+}
+ion-grid{
+  background-color: var(--ion-color-warning);
+}
+
+// CGV: El siguiente estilo se agregó para que se pueda mostrar siempre el botón
+// del MatDatePicker, puesto que aparecía invisible producto de los colores 
+// asociados al Theme escogido al instalar Angular Material
+::ng-deep .mat-datepicker-toggle{
+  color: yellow;
+}

@@ -1,0 +1,29 @@
+<ion-header>
+  <img src="assets/img/logo.jpg" alt="">
+  <ion-toolbar color="secondaryduoc">
+    <ion-title>Sistema de asistencia DUOC</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <div class="titulos">
+      <h3>Recuperar contraseña</h3>
+      <p>Paso 1: Ingresa tu correo</p>
+    </div>
+  
+    <div id="container">
+      <form>
+        <div class="form-group">
+          <center><input class="form-control" type="text" placeholder="Ingresa tu Correo" ></center>
+        </div>
+        
+        <div>
+          <button class="btn" type="submit">Recuperar contraseña</button>
+        </div>
+      </form>
+    <br>
+    </div>
+  </ion-card>
+  <center><a [routerLink]="'/pregunta'">Iniciar Sesi&oacute;n</a></center>
+</ion-content>

@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="secondary-duoc">
+    <ion-title>Lectura de Código QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+<br>
+
+<ion-content>
+
+  <input #fileinput hidden id="input-file" type="file" accept="image/*;capture=camera" 
+    (change)="verificarArchivoConQR($event.target.files)" />
+
+  <ion-button color="secondary-duoc" (click)="cargarImagenDesdeArchivo()" expand="full" shape="round">
+    <ion-icon slot="start" name="camera"></ion-icon>
+    Cargar Imagen con Código QR
+  </ion-button>
+
+  <ion-button color="secondary-duoc" *ngIf="!escaneando" (click)="comenzarEscaneoQR()" expand="full" shape="round">
+    <ion-icon slot="start" name="videocam-outline"></ion-icon>
+    Comenzar Escaneo de QR
+  </ion-button>
+
+  <ion-button color="secondary-duoc" *ngIf="escaneando" (click)="detenerEscaneoQR()" expand="full" shape="round">
+    <ion-icon slot="start" name="stop-circle-outline"></ion-icon>
+    Detener escaneo de QR
+  </ion-button>
+
+  <ion-button color="secondary-duoc" (click)="limpiarDatos()" expand="block" expand="full" shape="round">
+    <ion-icon slot="start" name="trash-outline"></ion-icon>
+    Limpiar datos
+  </ion-button>
+
+  <video #video [hidden]="!escaneando" width="100%"></video>
+  <canvas #canvas hidden></canvas>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Código QR</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <br>
+      Datos: {{ datosQR }}
+      <br><br>
+      Escaneando: {{ escaneando }}
+      <br>
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>
+<ion-tab-bar slot="bottom">
+  <ion-tab-button (click)="profiletab()">
+    <ion-icon name="person"></ion-icon>
+    <ion-label>Perfil</ion-label> 
+  </ion-tab-button>
+  <ion-tab-button (click)="qrbtn()">
+    <ion-icon name="qr-code"></ion-icon>
+    <ion-label>QR</ion-label> 
+  </ion-tab-button>
+</ion-tab-bar>

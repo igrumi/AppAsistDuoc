@@ -1,0 +1,7 @@
+{
+  "name": "RegistroAppDI",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

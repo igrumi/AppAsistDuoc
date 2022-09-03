@@ -1,0 +1,25 @@
+ion-content{
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+    --padding-end: 20px;
+    --padding-start: 20px;
+}
+ion-item{
+    --padding-bottom: 20px;
+}
+ion-card{
+    background-color: var(--ion-color-warning);
+    --color: var(--ion-color-warning-contrast);
+}
+ion-card-title{
+    --color: var(--ion-color-warning-contrast);
+}
+ion-title{
+    --color: var(--ion-color-warning-contrast);
+}
+ion-col{
+    background-color: var(--ion-color-warning);
+}
+ion-label{
+    --color: var(--ion-color-warning-contrast);
+}
