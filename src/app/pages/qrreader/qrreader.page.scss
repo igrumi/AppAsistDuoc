@@ -14,3 +14,9 @@ ion-toolbar{
 ion-button{
     background-color: rgb(255, 200, 0);
 }
+
+.data-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1em 0;
+}

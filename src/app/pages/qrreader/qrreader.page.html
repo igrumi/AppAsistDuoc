@@ -39,25 +39,23 @@
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Código QR</ion-card-title>
+      <ion-card-title>Datos de la asignatura</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <br>
-      Datos: {{ datosQR }}
-      <br><br>
-      Escaneando: {{ escaneando }}
-      <br>
+      <div *ngIf="datosQR" class="data-container">
+        <p class="data-item"><strong>Sede:</strong> <span>{{ datosMostrarQR.sede }}</span></p>
+        <p class="data-item"><strong>Sigla:</strong> <span>{{ datosMostrarQR.idAsignatura }}</span></p>
+        <p class="data-item"><strong>Secci&oacute;n:</strong> <span>{{ datosMostrarQR.seccion }}</span></p>
+        <p class="data-item"><strong>Nombre asignatura:</strong> <span>{{ datosMostrarQR.nombreAsignatura }}</span></p>
+        <p class="data-item"><strong>Nombre Profesor:</strong> <span>{{ datosMostrarQR.nombreProfesor }}</span></p>
+        <p class="data-item"><strong>D&iacute;a:</strong> <span>{{ datosMostrarQR.dia }}</span></p>
+        <p class="data-item"><strong>Bloque de inicio:</strong> <span>{{ datosMostrarQR.bloqueInicio }}</span></p>
+        <p class="data-item"><strong>Bloque de termino:</strong> <span>{{ datosMostrarQR.bloqueTermino }}</span></p>
+        <p class="data-item"><strong>Hora de inicio:</strong> <span>{{ datosMostrarQR.horaInicio }}</span></p>
+        <p class="data-item"><strong>Hora de termino:</strong> <span>{{ datosMostrarQR.horaFin }}</span></p>
+      </div>
     </ion-card-content>
   </ion-card>
   
 </ion-content>
-<ion-tab-bar slot="bottom">
-  <ion-tab-button (click)="profiletab()">
-    <ion-icon name="qr-code"></ion-icon>
-    <ion-label>Inicio</ion-label> 
-  </ion-tab-button>
-  <ion-tab-button (click)="qrbtn()">
-    <ion-icon name="person"></ion-icon>
-    <ion-label>Mi clase</ion-label> 
-  </ion-tab-button>
-</ion-tab-bar>

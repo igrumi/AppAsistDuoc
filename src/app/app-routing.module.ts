@@ -8,16 +8,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
-  },
-  {
-    path: 'qrreader',
-    loadChildren: () => import('./pages/qrreader/qrreader.module').then( m => m.QrreaderPageModule)
   },
   {
     path: 'correcto',
@@ -34,6 +26,10 @@ const routes: Routes = [
   {
     path: 'pregunta',
     loadChildren: () => import('./pages/pregunta/pregunta.module').then( m => m.PreguntaPageModule)
+  },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
   }
 ];
  

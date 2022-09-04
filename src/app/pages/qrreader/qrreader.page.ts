@@ -23,7 +23,9 @@ export class QrreaderPage implements AfterViewInit {
   
   public escaneando = false;
   public datosQR = '';
+  public datosMostrarQR: any;
   public loading: HTMLIonLoadingElement = null;
+
 
   public constructor(private loadingController: LoadingController, private router: Router) {
 
@@ -82,6 +84,8 @@ export class QrreaderPage implements AfterViewInit {
     if (qrCode) {
       this.escaneando = false;
       this.datosQR = qrCode.data;
+      this.datosMostrarQR = JSON.parse(this.datosQR);
+      console.log(this.datosMostrarQR);
     }
     return this.datosQR !== '';
   }
